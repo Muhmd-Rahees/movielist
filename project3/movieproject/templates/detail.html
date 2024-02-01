@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="padding-top: 50px;">
+            <img src="{{movie.img.url}}" width="400" height="500">
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-sm-12" style="text-align: left; text-orientation: sideways-right;padding-top: 50px;">
+                    <h2>{{movie.name}}<br></h2>
+                    {{movie.description}}<br>
+                    {{movie.year}}<br>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <!-- <div class="col-sm-6">
+                    <a class = "btn btn-warning" href = "{% url 'movieapp:update' movie.id %}" style="padding: inherit;">
+                        update
+                    </a><br>
+                </div>
+            -->
+            <div class="col-sm-6">
+                <a class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}" style="padding: inherit;position: relative;">
+                    Delete
+                </a><br>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
